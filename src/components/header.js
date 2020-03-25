@@ -2,18 +2,21 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import HeaderIcons from './headerIcons/HeaderIcons';
+
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: '#FF008C',
       marginBottom: `1.45rem`,
     }}
   >
     <div
       style={{
-        margin: `0 auto`,
+        margin: `100 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
+        display: 'flex',
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -24,9 +27,17 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          Rakuten Mobile
         </Link>
       </h1>
+      <div
+        style={{
+          position: "absolute",
+          right: 10,
+        }}
+      >
+        <HeaderIcons auth={true}/>
+      </div>
     </div>
   </header>
 )
