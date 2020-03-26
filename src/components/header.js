@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 import HeaderIcons from './headerIcons/HeaderIcons';
+import HeaderMenu from './headermenus/HeaderMenu';
 
 const Header = ({ siteTitle }) => (
   <header
@@ -16,6 +17,7 @@ const Header = ({ siteTitle }) => (
         margin: `100 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
+        paddingRight: '2rem',
         display: 'flex',
       }}
     >
@@ -30,6 +32,9 @@ const Header = ({ siteTitle }) => (
           Rakuten Mobile
         </Link>
       </h1>
+      <div>
+        <HeaderMenu />
+      </div>
       <div
         style={{
           position: "absolute",
