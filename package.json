@@ -5,9 +5,13 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^4.9.7",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/styles": "^4.9.6",
-    "gatsby": "^2.19.45",
+    "@rakuten-rex/button": "1.1.0",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.20.6",
     "gatsby-image": "^2.2.44",
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-material-ui": "^2.1.6",
@@ -21,6 +25,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-router-dom": "^5.1.2",
     "styled-components": "^5.0.1"
   },
   "devDependencies": {
@@ -34,7 +39,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "npm run develop HTTPS=true PORT=443",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"

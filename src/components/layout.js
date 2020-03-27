@@ -8,11 +8,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import './layout.css'
 
 import Header from "./header"
-import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ auth, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -22,12 +22,14 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
+  const blue = '#FF008C'
   return (
     <>
       <div>
         <Header 
-        siteTitle={data.site.siteMetadata.title} />
+        auth= {auth}
+        siteTitle={data.site.siteMetadata.title}
+        />
       </div>
       <div
         style={{
@@ -37,11 +39,18 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
+        <footer
+        styles={{
+          height: `10%`,
+          background: `black`,
+        }}>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
+        <div className="test">
+          test div
+        </div>
       </div>
     </>
   )
