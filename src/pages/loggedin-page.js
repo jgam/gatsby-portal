@@ -28,18 +28,6 @@ function Login() {
         getUserInfo();
     }, [])
 
-    /*
-    {userData.map( data =>(
-                <div>{Object.keys(data)[0]} : {Object.values(data)[0]}</div>
-            ))}
-    */
-
-    /*
-    <Redirect 
-                        to={`/`}
-                        component={Layout}
-                    />
-    */
     return (
         <Layout auth={true}>
             <div>
