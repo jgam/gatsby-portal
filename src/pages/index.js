@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -7,7 +7,11 @@ import SEO from "../components/seo"
 import Counter from '../components/counter/Counter';
 import MainImage from '../components/MainImage';
 
-const IndexPage = ({auth=false}) => (
+function IndexPage({auth=false}){
+  //const [Loggedin, isLoggedin] = useState(false);
+  //isLoggedin(auth);
+
+  return(
   <Layout auth={auth}>
     <SEO title="Home" />
     <h1>Welcome to IoT Portal</h1>
@@ -25,6 +29,6 @@ const IndexPage = ({auth=false}) => (
     </div>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
-)
-
+  )
+}
 export default IndexPage

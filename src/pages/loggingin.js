@@ -10,6 +10,10 @@ function Login() {
     const auth_code = window.location.href.slice(starting_index);
     console.log('auth_code is : ');
     console.log(auth_code);
+    console.log('window locations is: ')
+    console.log(window.location)
+    //use regex to replace!
+    //window.location.href = 'https://stg-gcp.iot.mobile.rakuten.co.jp:3001/loggedin-page/'
 
     const [userData, setData] = useState();
 
@@ -20,6 +24,7 @@ function Login() {
         console.log(JSON.stringify(user_info.data));
         console.log(typeof(user_info.data));
         console.log(user_info);
+        console.log(user_info.data.emailAddress);
         //console.log(user_info.data[0].value)
         setData(user_info.data)
     }
@@ -28,14 +33,33 @@ function Login() {
         getUserInfo();
     }, [])
 
-    return (
-        <Layout auth={true}>
-            <div>
-                ...loading
-                    
-            </div>
-        </Layout>
-    )
+    /*
+    <Router>
+                <Redirect from={`/`} to={`/loggedin-page`} />
+            </Router>
+    this works but code comes after
+    */
+   if(userData){
+        window.history.pushState(null, null, '/loggingin');
+        return (
+            <Layout auth={true}>
+               <div>
+                   staying here my boi!
+                   <br />
+                   {userData.emailAddress}
+               </div>
+           </Layout>
+            )
+   }
+   else{
+       return(
+           <Layout auth={false}>
+               <div>
+                   ...loading
+               </div>
+           </Layout>
+       )
+   }
 }
 
 export default Login;
