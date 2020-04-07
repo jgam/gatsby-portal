@@ -4,6 +4,7 @@ import React from "react"
 
 import HeaderIcons from './headerIcons/HeaderIcons';
 import HeaderMenu from './headermenus/HeaderMenu';
+import BurgerMolecule from './molecules/header/burger/BurgerMolecule';
 
 const Header = ({ auth, siteTitle }) => (
   <header
@@ -46,6 +47,7 @@ const Header = ({ auth, siteTitle }) => (
         }}
       >
         <HeaderIcons auth={auth}/>
+        <BurgerMolecule></BurgerMolecule>
       </div>
     </div>
   </header>
