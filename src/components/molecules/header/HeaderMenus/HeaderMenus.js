@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   display:flex;
-  background: black;
+  background: inherit;
 
 `;
 

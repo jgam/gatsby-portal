@@ -26,9 +26,7 @@ function HeaderIcons({auth}) {
     if(auth){
         return (//logged in
             <Wrapper>
-                
                 <ChildCareIcons />
-                
                 <a href="https://stg-gcp.iot.mobile.rakuten.co.jp:3001/Logout"><LogoutButton>Logout</LogoutButton></a>
                 <SearchIcons />
                 <Burger />
