@@ -7,6 +7,9 @@ const Wrapper = styled.button`
   height: ${props => props.height ? props.height : "15%"};
   width: ${props => props.width ? props.width : "15%"};
   color: ${props => props.color ? props.color : "black"};
+  cursor: pointer;
+  background: #FF008C;
+  border: none;
 `;
 
 function ChildCareIcons() {

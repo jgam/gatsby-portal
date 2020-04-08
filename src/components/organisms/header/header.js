@@ -12,14 +12,16 @@ import BurgerMolecule from '../../molecules/header/burger/BurgerMolecule';
 const Wrapper = styled.div`
     width: 100%,
     height: 10%,
-  display:flex
+  display:flex,
+  background: #FF008C;
 `;
 
 const Header = ({ auth, siteTitle }) => (
     <Wrapper>
         <header
             style={{
-            background: `#FF008C`,
+  background: `#FF008C`,
+            
             marginBottom: `1.45rem`,
             }}
         >

@@ -28,8 +28,9 @@ function HeaderIcons({auth}) {
             <Wrapper>
                 
                 <ChildCareIcons />
-                <SearchIcons />
+                
                 <a href="https://stg-gcp.iot.mobile.rakuten.co.jp:3001/Logout"><LogoutButton>Logout</LogoutButton></a>
+                <SearchIcons />
                 <Burger />
             </Wrapper>
         )

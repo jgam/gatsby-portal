@@ -3,9 +3,7 @@ import styled from 'styled-components'
 
 const Button = styled.button`
   /* Adapt the colors based on primary prop */
-  background: ${props => props.primary ? "palevioletred" : "white"};
   background: #FF008C;
-  background: black;
   color: ${props => props.primary ? "white" : "palevioletred"};
 
   font-size: 0.8em;

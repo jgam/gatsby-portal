@@ -8,7 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import './layout.css'
+//import './layout.css'
+import './app.css';
 
 //import Header from "./header"
 import Header from '../components/organisms/header/header';
