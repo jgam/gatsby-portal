@@ -3,14 +3,7 @@ import styled from 'styled-components'
 
 const Button = styled.button`
 
-    @keyframes hoverButton{
-        from{
-            opacity: 1;
-        }
-        to {
-            opacity: 0.5;
-        }
-    }
+    
   /* Adapt the colors based on primary prop */
   background: ${props => props.primary ? "palevioletred" : "white"};
   background: #FF008C;
