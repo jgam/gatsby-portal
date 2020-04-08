@@ -9,8 +9,9 @@ import BurgerMolecule from './molecules/header/burger/BurgerMolecule';
 const Header = ({ auth, siteTitle }) => (
   <header
     style={{
-      background: `#FF008C`,
+      background: `green`,
       marginBottom: `1.45rem`,
+      display: 'flex',
     }}
   >
     <div

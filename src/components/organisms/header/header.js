@@ -9,7 +9,9 @@ import HeaderMenus from '../../molecules/header/HeaderMenus/HeaderMenus';
 import BurgerMolecule from '../../molecules/header/burger/BurgerMolecule';
 
 
-const Wrapper = styled.button`
+const Wrapper = styled.div`
+    width: 100%,
+    height: 10%,
   display:flex
 `;
 
@@ -51,8 +53,7 @@ const Header = ({ auth, siteTitle }) => (
             <div
                 style={{
                 position: "absolute",
-                left: `80%`,
-                display: `flex`,
+                right: "10px",
                 }}
             >
                 <HeaderIcons auth={auth}/>

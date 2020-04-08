@@ -6,17 +6,18 @@ import SearchIcon from '@material-ui/icons/Search';
 //height: ${props => props.height ? props.height : "50px"};
 
 const Wrapper = styled.div`
-  height: ${props => props.height ? props.height : "50px"};
-  width: ${props => props.width ? props.width : "50px"};
-  color: ${props => props.color ? props.color : "black"};
-  background-color: red;
-  padding-top: 10px;
+  color: white;
+  background: #FF008C;
+  padding: 0.25em .5em;
+  cursor: pointer;
+  padding-left: 10px;
+
 `;
 
 function SearchIcons() {
     return (
         <Wrapper>
-            <SearchIcon />
+            <SearchIcon/>
         </Wrapper>
 
     )}

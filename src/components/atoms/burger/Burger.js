@@ -13,9 +13,9 @@ const Wrapper = styled.button`
 
   font-size: 0.8em;
   margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid white;
-  border-radius: 3px;
+  padding: 0.25em .5em;
+  border: none;
+  border-radius: 3px
   cursor: pointer;
 `;
 
