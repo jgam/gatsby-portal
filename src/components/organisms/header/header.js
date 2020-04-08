@@ -51,7 +51,7 @@ const Header = ({ auth, siteTitle }) => (
                             textDecoration: `none`,
                         }}
                         >
-                        Rakuten Mobile
+                            Rakuten Mobile
                         </Link>
                     </h1>
                 </div>
