@@ -28,11 +28,10 @@ function Burger() {
     function handleClick(e) {
         e.preventDefault();
         console.log('The burger was clicked.');
-        return SlidingComponent;
       }
     return (
         <Wrapper>
-            <MenuIcon onClick={handleClick}></MenuIcon>
+            <MenuIcon onClick={SlidingComponent}></MenuIcon>
         </Wrapper>
     )
 }

@@ -4,6 +4,11 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
     font-size: 20px;
     font-weight: bold;
+    z-index: 20;
+
+`;
+
+/* 
 @keyframes incomingAnim {
     from {
       opacity: 0;
@@ -15,8 +20,7 @@ const Wrapper = styled.div`
     }
   }
   animation: incomingAnim 0.5s ease-out forwards;
-`;
-
+*/
 function SlidingComponent() {
     return (
         <Wrapper>
