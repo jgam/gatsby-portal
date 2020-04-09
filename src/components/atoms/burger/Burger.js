@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+//imports
 import MenuIcon from '@material-ui/icons/Menu';
+import SlidingComponent from '../../molecules/SlidingComponent/SlidingComponent';
 
 //burger icon takes parameter
 //refers which pop ups should appear
@@ -15,15 +17,22 @@ const Wrapper = styled.button`
   margin: 1em;
   padding: 0.25em .5em;
   border: none;
-  border-radius: 3px
+  border-radius: 3px;
   cursor: pointer;
 `;
 
 
+
+
 function Burger() {
+    function handleClick(e) {
+        e.preventDefault();
+        console.log('The burger was clicked.');
+        return SlidingComponent;
+      }
     return (
         <Wrapper>
-            <MenuIcon></MenuIcon>
+            <MenuIcon onClick={handleClick}></MenuIcon>
         </Wrapper>
     )
 }
