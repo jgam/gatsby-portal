@@ -7,7 +7,8 @@ const Wrapper = styled.div`
     z-index: 20;
     position: absolute;
     right: 10px;
-    background-color: yellow;
+    background-color: #f5f5fa;
+    height: 600px;
 
     @keyframes incomingAnim {
         from {

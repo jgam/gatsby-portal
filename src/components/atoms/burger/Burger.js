@@ -20,10 +20,9 @@ const Wrapper = styled.button`
   border-radius: 3px;
   cursor: pointer;
 
+  
   :focus {
-    opacity: 0.5;
-    outline: none;
-  }
+      ${props => props.shouldBeRendered===true ? `opacity: 0.5; outline: none` : `outline:none`}
 `;
 
 //create state in here to take care of the transition
@@ -35,10 +34,13 @@ function Burger({setSliding, shouldBeRendered}) {
         console.log('The burger was clicked.');
         console.log(typeof(setSliding));
         console.log(shouldBeRendered);
+        if (shouldBeRendered == true){
+            
+        }
         setSliding(!shouldBeRendered);
       }
     return (
-        <Wrapper>
+        <Wrapper shouldBeRendered={shouldBeRendered}>
             <MenuIcon onClick={handleClick}></MenuIcon>
         </Wrapper>
     )
