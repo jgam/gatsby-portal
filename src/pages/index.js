@@ -7,12 +7,23 @@ import SEO from "../components/seo"
 import Counter from '../components/counter/Counter';
 import MainImage from '../components/MainImage';
 
+//imports
+import Router from '../components/Router';
+
 function IndexPage({auth=false}){
   //const [Loggedin, isLoggedin] = useState(false);
   //isLoggedin(auth);
 
   return(
-  <Layout auth={auth}>
+    <>
+      <Router />
+    </>
+  )
+}
+export default IndexPage
+
+/*
+<Layout auth={auth}>
     <SEO title="Home" />
     <h1>Welcome to IoT Portal</h1>
     <p>new way to build IoT technology with Rakuten Mobile</p>
@@ -29,6 +40,4 @@ function IndexPage({auth=false}){
     </div>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
-  )
-}
-export default IndexPage
+*/
