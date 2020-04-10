@@ -1,10 +1,22 @@
 import React from 'react'
+import {
+    BrowseRouter as Router,
+    Route,
+    Redirect,
+    Switch
+} from 'react-router-dom';
+
 
 function Router() {
     return (
-        <div>
-            
-        </div>
+        <Router>
+            <>
+            <Switch>
+                <Route path="/" component={} />
+                <Redirect from="*" to="/" />
+            </Switch>
+            </>
+        </Router>
     )
 }
 
