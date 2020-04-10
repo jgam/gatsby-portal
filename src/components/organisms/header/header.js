@@ -1,13 +1,16 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import styled from 'styled-components'
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import React, {useState} from "react";
+import styled from 'styled-components';
 
+//import Atoms
 import HeaderIcons from '../../molecules/header/HeaderIcons/HeaderIcons';
 import HeaderMenus from '../../molecules/header/HeaderMenus/HeaderMenus';
 
+//import Molecules
 import BurgerMolecule from '../../molecules/header/burger/BurgerMolecule';
 import zIndex from "@material-ui/core/styles/zIndex";
+import SlidingComponent from '../../molecules/SlidingComponent/SlidingComponent';
 
 
 const Wrapper = styled.div`
@@ -25,45 +28,52 @@ const SecondHeaderMenu = styled.div`
 
 `;
 
-const Header = ({ auth, siteTitle }) => (
-    <Wrapper>
-        <header
-            style={{
-             background: `#FF008C`,
-            marginBottom: `1.45rem`,
-            }}
-        >
-            <div
-            style={{
-                margin: `100 auto`,
-                maxWidth: 960,
-                padding: `1.45rem 1.0875rem`,
-                display: 'flex',
-                alignItems: `center`,
-            }}
+function Header({ auth, siteTitle }){
+
+    //state regarding SlidingComponents
+    const [shouldBeRendered, setSliding] = useState(false);
+
+    return(
+        <Wrapper>
+            <header
+                style={{
+                background: `#FF008C`,
+                marginBottom: `1.45rem`,
+                }}
             >
-                <div>
-                    <h1 style={{ margin: 0 }}>
-                        <Link
-                        to="/"
-                        style={{
-                            color: `white`,
-                            textDecoration: `none`,
-                        }}
-                        >
-                            Rakuten Mobile
-                        </Link>
-                    </h1>
+                <div
+                style={{
+                    margin: `100 auto`,
+                    maxWidth: 960,
+                    padding: `1.45rem 1.0875rem`,
+                    display: 'flex',
+                    alignItems: `center`,
+                }}
+                >
+                    <div>
+                        <h1 style={{ margin: 0 }}>
+                            <Link
+                            to="/"
+                            style={{
+                                color: `white`,
+                                textDecoration: `none`,
+                            }}
+                            >
+                                Rakuten Mobile
+                            </Link>
+                        </h1>
+                    </div>
+                    <SecondHeaderMenu>
+                        <HeaderMenus/>
+                        <HeaderIcons auth={auth} setSliding={setSliding} shouldBeRendered={shouldBeRendered}/>
+                    </SecondHeaderMenu>
+                    
                 </div>
-                <SecondHeaderMenu>
-                    <HeaderMenus/>
-                    <HeaderIcons auth={auth}/>
-                </SecondHeaderMenu>
-                
-            </div>
-        </header>
-  </Wrapper>
-)
+            </header>
+            <SlidingComponent shouldBeRendered={shouldBeRendered}/>
+        </Wrapper>
+    )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
@@ -73,7 +83,7 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default Header;
 
 /*
 <div

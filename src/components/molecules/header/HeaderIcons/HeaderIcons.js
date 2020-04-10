@@ -22,14 +22,16 @@ const Wrapper = styled.div`
 `;
 
 
-function HeaderIcons({auth}) {
+function HeaderIcons({auth, setSliding, shouldBeRendered}) {
+    console.log('setLiding in header Icons:')
+    console.log(typeof(setSliding));
     if(auth){
         return (//logged in
             <Wrapper>
                 <ChildCareIcons />
                 <a href="https://stg-gcp.iot.mobile.rakuten.co.jp:3001/Logout"><LogoutButton>Logout</LogoutButton></a>
                 <SearchIcons />
-                <Burger />
+                <Burger setSliding={setSliding} shouldBeRendered={shouldBeRendered}/>
             </Wrapper>
         )
     }
@@ -38,7 +40,7 @@ function HeaderIcons({auth}) {
             <Wrapper>
                 <a href="https://stg.grp03.id.rakuten.co.jp/rms/nid/login?service_id=i103&client_id=iot_web_portal&redirect_uri=https%3A%2F%2Fstg-gcp.iot.mobile.rakuten.co.jp:3001/loggingin/&scope=memberinfo_read_safebulk,memberinfo_read_details_safe,memberinfo_read_rank_safe,90days@Refresh,30days@Access&contact_info_required=false&rae_service_id="><LoginButton>LogIn</LoginButton></a>
                 <SearchIcons/>
-                <Burger />
+                <Burger setSliding={setSliding} shouldBeRendered={shouldBeRendered}/>
             </Wrapper>
         )
     }

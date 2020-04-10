@@ -29,14 +29,17 @@ const Wrapper = styled.button`
 //create state in here to take care of the transition
 
 
-function Burger() {
+function Burger({setSliding, shouldBeRendered}) {
     function handleClick(e) {
         e.preventDefault();
         console.log('The burger was clicked.');
+        console.log(typeof(setSliding));
+        console.log(shouldBeRendered);
+        setSliding(!shouldBeRendered);
       }
     return (
         <Wrapper>
-            <MenuIcon onClick={SlidingComponent}></MenuIcon>
+            <MenuIcon onClick={handleClick}></MenuIcon>
         </Wrapper>
     )
 }

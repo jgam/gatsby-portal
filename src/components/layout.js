@@ -13,6 +13,9 @@ import './app.css';
 
 //import Header from "./header"
 import Header from '../components/organisms/header/header';
+import SlidingComponent from '../components/molecules/SlidingComponent/SlidingComponent';
+
+//here I should rerender regarding states
 
 const Layout = ({ auth, children }) => {
   const data = useStaticQuery(graphql`
