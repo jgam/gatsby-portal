@@ -19,9 +19,14 @@ const Wrapper = styled.button`
   border: none;
   border-radius: 3px;
   cursor: pointer;
+
+  :focus {
+    opacity: 0.5;
+    outline: none;
+  }
 `;
 
-
+//create state in here to take care of the transition
 
 
 function Burger() {
