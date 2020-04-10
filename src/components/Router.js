@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-    BrowseRouter as RouterDom,
+    BrowseRouter as Router,
     Route,
     Redirect,
     Switch
@@ -10,19 +10,14 @@ import {
 import Header from '../components/organisms/header/header';
 import About from '../components/About';
 
-
-function Router() {
-    return (
-        <RouterDom>
-            <>
-            <Header />
-            <Switch>
-                <Route path="/" component={About} />
-                <Redirect from="*" to="/" />
-            </Switch>
-            </>
-        </RouterDom>
-    )
-}
-
-export default Router;
+export default () => (
+    <Router>
+        <>
+        <Header />
+        <Switch>
+            <Route path="/" component={About} />
+            <Redirect from="*" to="/" />
+        </Switch>
+        </>
+    </Router>
+);
