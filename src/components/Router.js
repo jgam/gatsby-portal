@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-    BrowseRouter as Router,
+    BrowserRouter as Router,
     Route,
     Redirect,
     Switch
