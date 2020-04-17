@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+//import { useStaticQuery, graphql } from "gatsby"
 //import './layout.css'
 import './app.css';
 
@@ -18,24 +18,18 @@ import SlidingComponent from '../components/molecules/SlidingComponent/SlidingCo
 //here I should rerender regarding states
 
 const Layout = ({ auth, children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
   const blue = '#FF008C'
   return (
     <>
-      <div>
-        <Header 
-        auth= {auth}
-        siteTitle={data.site.siteMetadata.title}
-        />
-      </div>
       <div
         style={{
           margin: `0 auto`,

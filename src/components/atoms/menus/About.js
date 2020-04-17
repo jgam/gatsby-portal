@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import {Link} from 'react-router-dom';
+
 const Wrapper = styled.button`
 @keyframes hoverButton{
     from{
@@ -30,9 +32,11 @@ const Wrapper = styled.button`
 
 function About() {
     return (
-        <Wrapper>
-            About
-        </Wrapper>
+        <a href={"/about"}>
+            <Wrapper onClick={() => console.log('about clicked!')}>
+                About
+            </Wrapper>
+        </a>
     )
 }
 

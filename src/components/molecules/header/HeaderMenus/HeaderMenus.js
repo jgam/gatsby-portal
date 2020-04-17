@@ -5,6 +5,14 @@ import styled from 'styled-components'
 import Product from '../../../atoms/menus/Product'
 import About from '../../../atoms/menus/About'
 
+//Router imports
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+
 
 const Wrapper = styled.div`
   justify-content: center;
@@ -18,10 +26,12 @@ const Wrapper = styled.div`
 //need to implement media query in here
 function HeaderMenu() {
     return (
-        <Wrapper>
-            <About />
-            <Product />
-        </Wrapper>
+        <Router>
+            <Wrapper>
+                <About />
+                <Product />
+            </Wrapper>
+        </Router>
     )
 }
 
