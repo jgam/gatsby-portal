@@ -1,7 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { Button } from '@storybook/react/demo';
-import HeaderMenu from '../src/components/molecules/header/HeaderMenus/HeaderMenus';
+import HeaderMenu from '../../src/components/molecules/header/HeaderMenus/HeaderMenus';
 
 export default {
   title: 'header-menus',

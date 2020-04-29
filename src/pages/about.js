@@ -6,6 +6,9 @@ import { useStaticQuery, graphql } from "gatsby"
 //header imported
 import Header from '../components/organisms/header/header';
 
+//REX
+import Button from '@rakuten-rex/button';
+
 
 function About({auth}) {
     // const data = useStaticQuery(graphql`
@@ -26,7 +29,10 @@ function About({auth}) {
             siteTitle={"here"}
             />
 
-            <div>This is About</div>
+            <div>This is About and will implement rex buttons</div>
+            <Button>
+                Click me
+            </Button>
         </div>
     )
 }

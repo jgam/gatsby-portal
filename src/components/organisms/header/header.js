@@ -8,8 +8,6 @@ import HeaderIcons from '../../molecules/header/HeaderIcons/HeaderIcons';
 import HeaderMenus from '../../molecules/header/HeaderMenus/HeaderMenus';
 
 //import Molecules
-import BurgerMolecule from '../../molecules/header/burger/BurgerMolecule';
-import zIndex from "@material-ui/core/styles/zIndex";
 import SlidingComponent from '../../molecules/SlidingComponent/SlidingComponent';
 
 
@@ -84,22 +82,3 @@ Header.defaultProps = {
 }
 
 export default Header;
-
-/*
-<div
-                    style={{
-                    position: "absolute",
-                    margin-right: "10px",
-                    }}
-                >
-                    <HeaderMenus/>
-                </div>
-                <div
-                    style={{
-                    position: "absolute",
-                    right: "10px",
-                    }}
-                >
-                    <HeaderIcons auth={auth}/>
-                </div> 
-*/
